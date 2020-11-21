@@ -134,19 +134,23 @@
 					//
 					//Exercise: Modify this code to remove the correct label each time!
 					//
-					svg.selectAll("text")
-					   .data(dataset)
-					   .transition()
-					   .duration(500)
-					   .text(function(d) {
-					   		return d;
-					   })
-					   .attr("x", function(d, i) {
+					
+					let textLabel = svg.selectAll("text").data(dataset)
+					textLabel					//Merges the enter selection with the update selection
+						.transition()							//Initiate a transition on all elements in the update selection (all rects)
+						.duration(500)
+						.attr("x", function (d, i) {
 							return xScale(i) + xScale.bandwidth() / 2;
-					   })
-					   .attr("y", function(d) {
+						})
+						.attr("y", function (d) {
 							return h - yScale(d) + 14;
-					   });
+						});
+
+						textLabel.exit()				//References the exit selection (a subset of the update selection)
+						.transition()		//Initiates a transition on the one element we're deleting
+						.duration(500)
+						.attr("x", w)		//Move past the right edge of the SVG
+						.remove();   		//Deletes this element from the DOM once transition is complete
 
 				});
 

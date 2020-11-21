@@ -1,0 +1,22 @@
+{
+  "name": "d3-book",
+  "version": "1.0.0",
+  "description": "These are sample code files to accompany the book “Interactive Data Visualization for the Web, Second Edition” by Scott Murray, published in July 2017 by O’Reilly.",
+  "main": "d3.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TRUEJASONFANS/d3-book.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TRUEJASONFANS/d3-book/issues"
+  },
+  "homepage": "https://github.com/TRUEJASONFANS/d3-book#readme",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
+}
